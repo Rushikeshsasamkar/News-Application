@@ -19,4 +19,28 @@ it's a web application that allows users to stay updated with the latest news fr
 - **React Redux:** State management for React applications.
 - **Headless UI:** UI components for React.
 
+### Screenshots
 
+## Default Screen
+
+
+![image](https://github.com/Rushikeshsasamkar/News-Application/assets/44942941/8e79f172-5a3a-44ac-ad17-8df6568b8fa9)
+
+
+## After Login (Grid View)
+
+![image](https://github.com/Rushikeshsasamkar/News-Application/assets/44942941/2065ced7-8dd4-4ef1-9437-e73ccda5b1c6)
+
+![image](https://github.com/Rushikeshsasamkar/News-Application/assets/44942941/ce4e49e3-638f-4704-95da-0c0575656f9a)
+
+## Detailed View
+
+![image](https://github.com/Rushikeshsasamkar/News-Application/assets/44942941/69788012-161c-48c6-9b00-58be5e53a1ce)
+
+
+
+
+
+
+
+  
