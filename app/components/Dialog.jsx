@@ -10,21 +10,21 @@ import { db } from '../firebaseconfig';
 import { addDoc, collection, deleteDoc, doc, getDocs, query, where } from 'firebase/firestore';
 
 const NewsContent = () => {
-    // state to check whether this news is favorite or not
+  
     const [favorite, setFavorite] = useState(false)
 
     const dispatch = useDispatch();
-    // get news data from state
+   
     const preferenceData = useSelector((state) => state.news);
     const openDialog = preferenceData?.isDialog || false;
     const dialogData = preferenceData?.dialogData;
     const savedNews = preferenceData?.savedNews || [];
-    // get user data from state
+    
     const userData = useSelector((state) => state.user)
 
-    // func to add or remove fav news from database and localstate
+    // add or remove fav news from database and localstate
     const handleFavorite = async () => {
-        // query to find and check if this news already exist in db or not
+        // query to find and check if this news already exist 
         const q = query(
             collection(db, "news"),
             where("email", "==", userData?.user?.email),
@@ -32,14 +32,14 @@ const NewsContent = () => {
         );
 
         const querySnapshot = await getDocs(q);
-        // this means that already exist, so we will delete this
+        // already exist,
         if (querySnapshot.size > 0) {
             querySnapshot.forEach(async (doc) => {
                 await deleteDoc(doc.ref);
-                // console.log("Document successfully deleted!");
+                
             });
         } else {
-            // if not exist, then we are adding it to db, to make it favorite
+            //  to make it favorite
             const obj = {
                 ...dialogData,
                 email: userData?.user?.email
@@ -57,19 +57,18 @@ const NewsContent = () => {
         }
     };
 
-    // func to close the dialog box
     const closeDialog = () => {
         dispatch(TOGGLEDIALOG(null));
     };
 
-    // check if favorite or not to apply the CSS accordingly
+
     useEffect(() => {
         const index = savedNews.findIndex((item) => item?.title === dialogData?.title) || [];
         if (index === -1) {
-            // Object not found in savedNews
+          
             setFavorite(false)
         } else {
-            // Object found in savedNews
+          
             setFavorite(true)
         }
     }, [dialogData])

@@ -20,7 +20,8 @@ const Card = ({ data, enabled }) => {
         <span>{data?.author}</span>
         <span>{moment(data?.publishedAt).format('ll')}</span>
       </div>
-      <h1 className='text-xs text-center md:text-sm my-2 w-full italic'>Open, Read, Save</h1>
+      <button className='text-xs text-center md:text-sm my-2 w-full italic btn btn-success'>Open</button>
+      
     </div>
   )
 }
