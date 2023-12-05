@@ -14,7 +14,7 @@ const Popular = () => {
     // func to fetch the data from API, using fetch instead of react query or axios
     const fetchPopularNews = async () => {
         try {
-            const request = await fetch('https://newsapi.org/v2/everything?q=apple&from=2023-12-04&to=2023-12-04&sortBy=popularity&apiKey=b44c99bcd32b45d4a5db0a131fac977b')
+            const request = await fetch('https://newsdata.io/api/1/news?apikey=pub_3417770cf6aad02cfa11e27cf2350045dc119&q=pegasus&language=en')
             const response = await request.json()
             if (response.articles.length > 0) {
                 dispatch(STORENEWSDATA(response?.articles))
