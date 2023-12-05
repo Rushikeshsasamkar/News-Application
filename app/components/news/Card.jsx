@@ -11,7 +11,7 @@ const Card = ({ data, enabled }) => {
   }
 
   return (
-    <div onClick={handleDialog} className={` ${enabled ? 'w-[150px] sm:w-[280px] md:w-[230px] lg:w-[300px] 2xl:w-[350px]' : 'w-full md:w-[400px] lg:w-[500px] xl:w-[600px]'} flex flex-col items-start justify-start rounded-2xl shadow-lg mx-2 my-2 bg-slate-200 p-2 card`}>
+    <div onClick={handleDialog} className={` ${enabled ? 'w-[150px] sm:w-[280px] md:w-[230px] lg:w-[300px] 2xl:w-[350px]' : 'w-full md:w-[400px] lg:w-[500px] xl:w-[600px]'} flex flex-col items-start justify-start rounded-2xl shadow-2xl mx-2 my-2 bg-slate-50 p-2 card hover:bg-slate-200`}>
       <span className='text-xs md:text-sm my-2 italic'>{data?.title}</span>
       <div className='image-container'>
         <img src={data?.urlToImage} alt='img' className='w-full h-2/12' />
@@ -20,7 +20,11 @@ const Card = ({ data, enabled }) => {
         <span>{data?.author}</span>
         <span>{moment(data?.publishedAt).format('ll')}</span>
       </div>
-      <button className='text-xs text-center md:text-sm my-2 w-full italic btn btn-success'>Open</button>
+      <button className='text-xs text-center md:text-sm my-2 w-30 italic bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded-full focus:outline-none focus:shadow-outline-green active:bg-green-800 mx-auto block'>
+        Open
+      </button>
+
+
       
     </div>
   )

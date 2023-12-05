@@ -84,10 +84,10 @@ const Navbar = () => {
     };
 
     return (
-        <div className="flex justify-between items-center mt-0 bg-teal-600 w-full px-6 py-4">
+        <div className="flex justify-between items-center mt-0 bg-green-500 shadow-2xl w-full px-6 py-4">
             <h1 className="text-lg font-extrabold italic text-white">Latest News</h1>
             {!userData?.isAuth ? (
-                <button onClick={signIn} className="px-4 py-1 rounded-md bg-slate-300 text-xs md:text-sm">
+                <button onClick={signIn} className="px-4 py-1 rounded-md shadow-lg bg-slate-100 text-xs md:text-sm">
                     Login
                 </button>
             ) : (
@@ -99,7 +99,7 @@ const Navbar = () => {
                         height={30}
                         className="rounded-full mr-2"
                     />
-                    <button onClick={logout} className="px-4 py-1 rounded-md bg-slate-300 text-xs md:text-sm">
+                    <button onClick={logout} className="px-4 py-1 text-white rounded-md shadow-lg bg-red-500 text-xs md:text-sm">
                         Logout
                     </button>
                 </div>

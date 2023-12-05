@@ -108,7 +108,7 @@ const NewsContent = () => {
                                         </div>
                                     </div>
 
-                                    <div className="flex justify-between items-center w-full mt-4">
+                                    <div className="flex justify-between items-center w-full mt-4 ">
                                         <span className="flex">
                                             {favorite ? 'Saved: ' : 'Save It: '}
                                             <StarIcon
@@ -116,8 +116,8 @@ const NewsContent = () => {
                                                 className={`w-6 h-6 cursor-pointer ${favorite ? 'text-yellow-500' : 'text-slate-300'}`}
                                             />
                                         </span>
-                                        <span onClick={closeDialog} className="flex cursor-pointer">
-                                            <ArrowLeftIcon className="w-6 h-6" />
+                                        <span onClick={closeDialog} className="flex items-center cursor-pointer text-gray-600 hover:text-gray-800 transition">
+                                            <ArrowLeftIcon className="w-5 h-5 mr-1" />
                                             Back
                                         </span>
                                     </div>

@@ -25,7 +25,7 @@ const Dashboard = () => {
                 <Switch
                     checked={enabled}
                     onChange={handleGrid}
-                    className={`${enabled ? 'bg-blue-600' : 'bg-gray-200'
+                    className={`${enabled ? 'bg-blue-500' : 'bg-zinc-400'
                         } relative inline-flex h-6 w-11 items-center rounded-full`}
                 >
                     <span
