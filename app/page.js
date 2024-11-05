@@ -9,8 +9,7 @@ export default function Home() {
   return (
     <div className="mt-4">
       {
-        !userData?.isAuth ? (<h1 className="text-center italic font-bold">Exclusive Access: Login Now to Explore Our Latest News Updates!</h1>)
-          : <Dashboard />
+           <Dashboard />
       }
     </div>
   )
